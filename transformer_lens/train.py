@@ -9,7 +9,6 @@ from typing import Optional
 
 import torch
 import torch.optim as optim
-import wandb
 from torch.optim import Optimizer
 from torch.utils.data import DataLoader, Dataset
 from tqdm.auto import tqdm
@@ -77,6 +76,8 @@ def train(
     torch.manual_seed(config.seed)
     model.train()
     if config.wandb:
+        import wandb
+
         if config.wandb_project_name is None:
             config.wandb_project_name = "easy-transformer"
         wandb.init(project=config.wandb_project_name, config=vars(config))
