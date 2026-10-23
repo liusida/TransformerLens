@@ -1,0 +1,42 @@
+transformer\_lens package
+=========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   transformer_lens.benchmarks
+   transformer_lens.cache
+   transformer_lens.config
+   transformer_lens.conversion_utils
+   transformer_lens.factories
+   transformer_lens.lit
+   transformer_lens.model_bridge
+   transformer_lens.tools
+   transformer_lens.utilities
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   transformer_lens.HookedRootModule
+   transformer_lens.evals
+   transformer_lens.head_detector
+   transformer_lens.hook_points
+   transformer_lens.model_protocol
+   transformer_lens.patching
+   transformer_lens.supported_models
+   transformer_lens.weight_processing
+
+Module contents
+---------------
+
+.. automodule:: transformer_lens
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :exclude-members: ActivationCache, FactoredMatrix, SVDInterpreter, EasyTransformerConfig
