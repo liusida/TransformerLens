@@ -25,6 +25,8 @@ Tools:
       placebo, batched gradient-free evaluation, distributed alignment search
       (DAS) to learn the subspace, and DAS's trained controls (arbitrary labels
       and a randomly initialised model).
+    - ica_lens: Load fitted ICA coordinate systems and map residual-stream
+      vectors to and from independent-component scores.
     - jacobian_lens: The Jacobian lens (J-lens) — per-layer causal transport to
       the output vocabulary basis, with loading of published lens artifacts,
       native fitting, readouts, interventions, J-space sparse decomposition, and
@@ -56,6 +58,7 @@ from transformer_lens.tools.analysis.attribution_patching import (
 from transformer_lens.tools.analysis.direct_logit_attribution import (
     direct_logit_attribution,
 )
+from transformer_lens.tools.analysis.ica_lens import ICALens
 from transformer_lens.tools.analysis.interchange import (
     LearnedSubspace,
     NormMatchedPlacebo,
@@ -98,6 +101,7 @@ from transformer_lens.tools.analysis.sparse_probing import (
 __all__ = [
     "EdgeAttributionConfig",
     "FaithfulnessConfig",
+    "ICALens",
     "JSpaceDecomposition",
     "JacobianLens",
     "LearnedSubspace",

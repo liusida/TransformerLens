@@ -1,0 +1,16 @@
+{
+  "_comment": "Artifact registry for pre-fitted ICA Lens checkpoints hosted on sida/ica-lens-transformer-lens. Keys are short model names accepted by ICALens.from_pretrained(); aliases are canonical Hugging Face model IDs. revision pins the artifact repository for reproducible loading.",
+  "revision": "11a359f48e9c1811da8bbdbcff7abd76c1e92d3a",
+  "gemma-2-2b": {
+    "aliases": ["google/gemma-2-2b"],
+    "repo_id": "sida/ica-lens-transformer-lens",
+    "filename": "gemma-2-2b/icalens/NeelNanda-pile-10k/gemma-2-2b_ica_lens.pt",
+    "corpus": "NeelNanda-pile-10k"
+  },
+  "gpt2-small": {
+    "aliases": ["gpt2", "openai-community/gpt2"],
+    "repo_id": "sida/ica-lens-transformer-lens",
+    "filename": "gpt2-small/icalens/NeelNanda-pile-10k/gpt2_ica_lens.pt",
+    "corpus": "NeelNanda-pile-10k"
+  }
+}
