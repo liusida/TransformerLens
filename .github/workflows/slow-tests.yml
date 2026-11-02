@@ -1,16 +1,10 @@
-# Nightly slow-tier run. 20+ integration/acceptance files carry
+# Manual slow-tier run. 20+ integration/acceptance files carry
 # @pytest.mark.slow, and no PR-gating workflow executes them — without this
 # job that coverage reads as CI-gated when it never runs (flagged in the
-# #1593/#1598 reviews). Manual trigger available for pre-merge checks.
-#
-# NOTE: GitHub only fires `schedule` from the default branch, so the cron is
-# inert until this file reaches `main`; use workflow_dispatch (via the API or
-# `gh workflow run --ref <branch>`) before then.
+# #1593/#1598 reviews). Trigger it manually for pre-merge checks.
 name: Slow Tests
 
 on:
-  schedule:
-    - cron: "0 5 * * *" # nightly, off-peak
   workflow_dispatch:
 
 concurrency:
@@ -19,7 +13,7 @@ concurrency:
 
 jobs:
   slow-tests:
-    name: Slow Tests (nightly)
+    name: Slow Tests (manual)
     runs-on: ubuntu-latest
     timeout-minutes: 300
     steps:
